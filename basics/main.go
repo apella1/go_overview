@@ -32,4 +32,22 @@ func main() {
 	// same line variable declaration
 	language, author, isPublished := "English", "Dale Carnegie", false
 	fmt.Println(language, author, isPublished)
+
+	sendsSoFar := 67
+	const sendsToAdd = 322
+	sendsSoFar = incrementSends(sendsSoFar, sendsToAdd)
+	fmt.Println("You have sent", sendsSoFar, "messages.")
+
+	// getting just the first name
+	firstName, _ := getNames()
+	fmt.Println("Welcome,", firstName)
+}
+
+func incrementSends(sendsSoFar, sendsToAdd int) int {
+	sendsSoFar = sendsSoFar + sendsToAdd
+	return sendsSoFar
+}
+
+func getNames() (string, string) {
+	return "John", "Doe"
 }

@@ -33,4 +33,13 @@ func variables() {
 	const minutesInHour = 60
 	const secondsInHour = secondsInMinute * minutesInHour
 	fmt.Println("The number of seconds in an hours is", secondsInHour)
+
+	// variables are passed by value, not by reference
+	x := 7
+	increment(x)
+	fmt.Println(x)
+}
+
+func increment(a int) {
+	a++
 }

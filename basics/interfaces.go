@@ -2,6 +2,10 @@ package main
 
 import "math"
 
+// ! keep interfaces as clean as you can
+// ! interface should have no knowledge of satisfying types
+// ! interfaces define method signatures but not underlying behavior
+
 type expense interface {
 	cost() float64
 }

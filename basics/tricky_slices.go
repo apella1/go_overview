@@ -40,18 +40,11 @@ func fishySlices() {
 }
 
 func indexOfFirstBadWord(msg []string, badWords []string) int {
-	var ind int
 	for index, badWord := range badWords {
-		found := false
 		for _, word := range msg {
 			if badWord == word {
-				ind = index
-				found = true
-				break
+				return index
 			}
-		}
-		if found {
-			return ind
 		}
 	}
 	return -1

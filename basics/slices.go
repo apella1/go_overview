@@ -25,6 +25,11 @@ func slices() {
 	// builtin cap() and len() for slices
 	// capacity is the max len of slice before reallocation is necessary
 	fmt.Println(cap(affirmation), len(affirmation))
+
+	// range function for iterating over slices
+	for i, fruit := range affirmation {
+		fmt.Println(i, fruit)
+	}
 }
 
 const (
@@ -52,4 +57,16 @@ func getMessageCosts(messages []string) []float64 {
 		messageCosts[i] = float64(len(messages[i])) * 0.01
 	}
 	return messageCosts
+}
+
+func createMatrix(rows, cols int) [][]int {
+	matrix := make([][]int, 0)
+	for i := 0; i <= rows; i++ {
+		row := make([]int, 0)
+		for j := 0; j <= cols; j++ {
+			row = append(row, i*j)
+		}
+		matrix = append(matrix, row)
+	}
+	return matrix
 }

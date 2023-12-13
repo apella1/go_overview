@@ -2,7 +2,9 @@ package main
 
 // package main signifies that the program can be run as a standalone executable
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Starting TextIo server!")
@@ -41,6 +43,16 @@ func main() {
 	// getting just the first name
 	firstName, _ := getNames()
 	fmt.Println("Welcome,", firstName)
+
+	// myStrings := printStrings("Hello", "world", "majestic")
+	// fmt.Println(myStrings)
+	variadicFuncs()
+	tenByTenMatrix := createMatrix(10, 10)
+	fmt.Println(tenByTenMatrix)
+	fmt.Println(divide(4, 0))
+	trickySlices()
+	fishySlices()
+	slices()
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

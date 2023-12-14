@@ -63,6 +63,14 @@ func main() {
 
 	names := []string{"john", "jacob", "paul", "peter", "john", "john"}
 	fmt.Println(getNameCounts(names))
+
+	fmt.Println()
+	fmt.Println("Advanced Functions")
+	advancedFunctions()
+	fmt.Println()
+	fmt.Println("Function Closures")
+	closures()
+	anonymousFunctions()
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

@@ -4,7 +4,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/apella1/go_overview/intermediate"
 )
 
 func main() {
@@ -55,9 +54,9 @@ func main() {
 	fishySlices()
 	slices()
 
-	fmt.Println("Intermediate concepts start here!")
 	fmt.Println()
-	intermediate.IntermediateConcepts()
+	fmt.Println("Maps start here!")
+	maps()
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

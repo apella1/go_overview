@@ -4,6 +4,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/apella1/go_overview/intermediate"
 )
 
 func main() {
@@ -74,6 +76,9 @@ func main() {
 	fmt.Println()
 	fmt.Println("Pointers")
 	pointers()
+
+	// From intermediate package
+	intermediate.IntermediateConcepts()
 
 }
 

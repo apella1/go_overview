@@ -71,6 +71,10 @@ func main() {
 	fmt.Println("Function Closures")
 	closures()
 	anonymousFunctions()
+	fmt.Println()
+	fmt.Println("Pointers")
+	pointers()
+
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

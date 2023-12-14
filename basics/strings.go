@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func strings() {
+func stringFormatting() {
 	// formatting strings
 	const name = "Theodore Roosevelt"
 	const openRate = 46.2

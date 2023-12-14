@@ -57,6 +57,12 @@ func main() {
 	fmt.Println()
 	fmt.Println("Maps start here!")
 	maps()
+	nestedMaps()
+	keyTypes()
+	structs()
+
+	names := []string{"john", "jacob", "paul", "peter", "john", "john"}
+	fmt.Println(getNameCounts(names))
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

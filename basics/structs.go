@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// ! structs are comparable thus can be used for map keys
 type messageToSend struct {
 	message     string
 	phoneNumber int
@@ -40,7 +41,7 @@ func structs() {
 		},
 	}
 
-	// ! Dot notation can also be used to override the default values of the fieds
+	// ! Dot notation can also be used to override the default values of the fields
 	/* manchesterUnited.Name = "Manchester United F.C."
 	manchesterUnited.yearFounded = 1876
 	manchesterUnited.Manager = "Eric Ten Hag"

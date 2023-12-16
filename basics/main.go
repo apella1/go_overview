@@ -77,8 +77,12 @@ func main() {
 	fmt.Println("Pointers")
 	pointers()
 
+	sendEmail("Good morning")
+
 	// From intermediate package
 	intermediate.IntermediateConcepts()
+
+	concurrentFib(30)
 
 }
 

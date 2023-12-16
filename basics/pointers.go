@@ -60,9 +60,9 @@ func (c *car) setColor(color string) {
 }
 
 type newEmail struct {
-	message string
+	message  string
 	fromAddr string
-	toAddr string
+	toAddr   string
 }
 
 func (e *newEmail) setMessage(newMsg string) {

@@ -9,3 +9,6 @@
 - Conditionals
 - Error handling
 - Arrays and slices
+- Concurrency
+- Channels
+- Select statements

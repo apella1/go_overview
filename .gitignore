@@ -19,3 +19,6 @@
 # Binaries
 /bin/
 /pkg/
+
+# basics binary
+/basics/basics

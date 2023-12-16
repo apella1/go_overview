@@ -83,6 +83,7 @@ func main() {
 	intermediate.IntermediateConcepts()
 
 	concurrentFib(30)
+	generics()
 
 }
 

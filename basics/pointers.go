@@ -36,14 +36,25 @@ func sendMessage(m Message) {
 	fmt.Printf("Message: %v\n", m.Text)
 }
 
+func makeString(n int) string {
+	word := ""
+	for i := 0; i < n; i++ {
+		word += "*"
+	}
+	return word
+}
+
 func removeProfanity(message *string) {
+	profanityWords := []string{"dang", "shoot", "heck", "bitch"}
+	profanityWords = append(profanityWords, "shit")
 	if message == nil {
 		return
 	}
+
 	msgVal := *message
-	msgVal = strings.ReplaceAll(msgVal, "dang", "****")
-	msgVal = strings.ReplaceAll(msgVal, "shoot", "*****")
-	msgVal = strings.ReplaceAll(msgVal, "heck", "****")
+	for _, p := range profanityWords {
+		msgVal = strings.ReplaceAll(msgVal, p, makeString(len(p)))
+	}
 	*message = msgVal
 }
 
@@ -52,11 +63,20 @@ func removeProfanity(message *string) {
 // * pointer receiver
 
 type car struct {
-	color string
+	color      string
+	noOfWheels int
 }
 
 func (c *car) setColor(color string) {
 	c.color = color
+}
+
+func (c *car) setWheels(wheels int) {
+	c.noOfWheels = wheels
+}
+
+func (c car) calculateSpeed() int {
+	return c.noOfWheels * 40
 }
 
 type newEmail struct {

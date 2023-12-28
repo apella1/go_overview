@@ -91,6 +91,8 @@ func main() {
 	exercises.PrintIntAndFloat()
 	exercises.MultipleAssignments()
 	exercises.MultipleVariables()
+
+	fmt.Println("Make file works!")
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

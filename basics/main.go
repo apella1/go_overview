@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/apella1/go_overview/exercises"
 	"github.com/apella1/go_overview/intermediate"
 )
 
@@ -85,6 +86,11 @@ func main() {
 	concurrentFib(30)
 	generics()
 
+	fmt.Println()
+	fmt.Println("Exercises Package")
+	exercises.PrintIntAndFloat()
+	exercises.MultipleAssignments()
+	exercises.MultipleVariables()
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

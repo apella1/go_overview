@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-func genericConstraints() {}
-
 type biller[C customer] interface {
 	Charge(C) bill
 	Name() string

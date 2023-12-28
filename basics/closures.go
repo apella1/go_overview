@@ -12,6 +12,13 @@ func closures() {
 	wordMaker("interesting")
 	wordMaker("programming")
 	fmt.Println(wordMaker("language."))
+
+	myAdder := adder()
+	myAdder(4)
+	myAdder(5)
+	myAdder(7)
+	myAdder(9)
+	fmt.Println(myAdder(12))
 }
 
 func concatter() func(string) string {

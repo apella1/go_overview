@@ -60,9 +60,6 @@ func getExpensesReportSwitchCase(e expense) (string, float64) {
 	}
 }
 
-func interfaces() {
-}
-
 // interfaces are a collection of method signatures
 type shape interface {
 	area() float64
@@ -100,6 +97,7 @@ func (c circle) perimeter() float64 {
 type employee interface {
 	getName() string
 	getSalary() int
+	increaseSalary() float64
 }
 
 type contractor struct {
@@ -114,6 +112,10 @@ func (c contractor) getName() string {
 
 func (c contractor) getSalary() int {
 	return c.hourlyPay * c.hoursPerYear
+}
+
+func (c *contractor) increaseSalary() float64 {
+	return float64(c.hourlyPay) * 1.20
 }
 
 type fullTime struct {
@@ -132,6 +134,7 @@ func (f fullTime) getSalary() int {
 // naming interface method arguments
 // provides intent for the types implementing the interface
 
+// * named interface method parameters & return value
 type copier interface {
 	copy(sourceFile string, destinationFile string) (bytesCopied int)
 }

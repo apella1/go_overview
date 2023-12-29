@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
 
 func stringFormatting() {
 	// formatting strings
@@ -25,4 +29,43 @@ type authenticationInfo struct {
 
 func (authInfo authenticationInfo) getBasicAuthInfo() string {
 	return fmt.Sprintf("Authorization Basic %s:%s", authInfo.username, authInfo.password)
+}
+
+func stringManipulation() {
+	// * declaring multiline strings using backticks
+	str := `This is
+	a multiline
+	string
+	`
+	fmt.Println(str)
+
+	// * string concatenation
+	// works okay
+	newStr := "abc"
+	newStr = newStr + "def"
+	fmt.Print(newStr)
+
+	// more efficient when combining lots of stings
+	var sb strings.Builder
+	sb.WriteString("This has been ")
+	sb.WriteString("concatenated using strings Builder")
+	fmt.Println(sb)
+
+	// ! you can't simply cast a number to a string
+	number := 124
+	// castStr := string(number)
+	// fmt.Println(castStr)
+	rightStr := strconv.Itoa(number)
+	fmt.Println(rightStr)
+	otherRightStr := fmt.Sprintf("%d", number)
+	fmt.Println(otherRightStr)
+
+	// * strings can be converted into byte slices and byte slices can be converted to strings
+	original := "this is a string"
+	var b []byte
+	b = []byte(original)
+	fmt.Println(b)
+	var s string
+	s = string(b)
+	fmt.Println(s)
 }

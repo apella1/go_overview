@@ -93,6 +93,12 @@ func main() {
 	exercises.MultipleVariables()
 
 	fmt.Println("Make file works!")
+
+	fmt.Println()
+	fmt.Println("Exercises Package")
+	stringFormatting()
+	stringManipulation()
+
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

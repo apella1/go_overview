@@ -87,17 +87,16 @@ func main() {
 	generics()
 
 	fmt.Println()
+	fmt.Println("String manipulation")
+	stringFormatting()
+	stringManipulation()
+
+	fmt.Println()
 	fmt.Println("Exercises Package")
 	exercises.PrintIntAndFloat()
 	exercises.MultipleAssignments()
 	exercises.MultipleVariables()
-
-	fmt.Println("Make file works!")
-
-	fmt.Println()
-	fmt.Println("Exercises Package")
-	stringFormatting()
-	stringManipulation()
+	exercises.ComparingMaps()
 
 }
 

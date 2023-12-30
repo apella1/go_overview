@@ -34,7 +34,7 @@ func structs() {
 		},
 		topPlayer: Player{
 			isMarried: false,
-			Name:      "Bobby Mainoo",
+			Name:      "Bobby Charlton",
 			Number:    23,
 			Age:       16,
 			Weight:    67.78,
@@ -56,7 +56,7 @@ func structs() {
 	manchesterUnited.youngestPlayer.Weight = 70.56
 	manchesterUnited.youngestPlayer.Number = 11 */
 
-	// for nested structs, the nested fields cannot be accessed at the top leve
+	// for nested structs, the nested fields cannot be accessed at the top level
 	// i.e manchesterUnited.Age (where Age is a field of the player struct)
 	fmt.Println(manchesterUnited.youngestPlayer)
 
@@ -99,6 +99,7 @@ type Team struct {
 	topPlayer      Player
 }
 
+// ? what are the rules around naming structs
 type Player struct {
 	Name      string
 	Number    int

@@ -85,6 +85,7 @@ func main() {
 
 	concurrentFib(30)
 	generics()
+	keyWords()
 
 	fmt.Println()
 	fmt.Println("String manipulation")
@@ -97,6 +98,8 @@ func main() {
 	exercises.MultipleAssignments()
 	exercises.MultipleVariables()
 	exercises.ComparingMaps()
+	exercises.Structs()
+	exercises.Shadowing()
 
 }
 

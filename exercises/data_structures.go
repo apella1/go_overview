@@ -43,3 +43,25 @@ func ComparingMaps() {
 
 	// todo : hash maps
 }
+
+func Structs() {
+	jane := Employee{
+		firstName: "Jane",
+		lastName:  "Doe",
+		id:        10,
+	}
+	fmt.Println(jane)
+	peter := Employee{
+		id: 10,
+	}
+	fmt.Println(peter)
+	var john Employee
+	john.lastName = "Emily"
+	fmt.Println(john)
+}
+
+type Employee struct {
+	firstName string
+	lastName  string
+	id        int
+}

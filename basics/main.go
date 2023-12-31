@@ -103,6 +103,10 @@ func main() {
 	exercises.Structs()
 	exercises.Shadowing()
 
+	switchOverview()
+	typeSwitches()
+	fizzBuzzSwitch()
+
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

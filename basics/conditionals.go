@@ -38,4 +38,12 @@ func conditionals() {
 	} else {
 		fmt.Printf("%v  is a good number.", n)
 	}
+
+	if choice := rand.Intn(3); choice == 1 {
+		fmt.Println("You have selected", choice)
+	} else if choice == 2 {
+		fmt.Println(choice, "is even.")
+	} else {
+		fmt.Println(choice, "is odd.")
+	}
 }

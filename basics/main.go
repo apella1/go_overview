@@ -109,6 +109,7 @@ func main() {
 
 	intermediate.LegalGoto()
 
+	exercises.PopulateIntSlice()
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

@@ -107,6 +107,8 @@ func main() {
 	typeSwitches()
 	fizzBuzzSwitch()
 
+	intermediate.LegalGoto()
+
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

@@ -1,6 +1,9 @@
 package intermediate
 
 import (
+	"context"
+	"database/sql"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -28,4 +31,49 @@ func Defer() {
 			break
 		}
 	}
+}
+
+func DeferExample() int {
+	a := 10
+	defer func (val int) {
+		fmt.Println("first:", val)
+	}(a)
+	a = 20
+	defer func (val int) {
+		fmt.Println("second:", val)
+	}(a)
+	a = 30
+	fmt.Println("exiting:", a)
+	return a
+}
+
+// * You can supply a function that returns values to defer
+// * but there is no way to read those values
+
+func SupplyReturnFunc() {
+	// ! defer expressions must be function calls like JavaScript's IIFEs
+	defer func () int {
+		return 2
+	}()
+}
+
+func DoSomeInserts(ctx context.Context, db *sql.DB, value1, value2 string) (err error) {
+	tx, err := db.BeginTx(ctx, nil)
+	if err != nil {
+		return err
+	}
+	defer func(){
+		if err == nil {
+			err = tx.Commit()
+		}
+		if err != nil {
+			tx.Rollback()
+		}
+	}()
+	_, err = tx.ExecContext(ctx, "INSERT INTO FOO (val) values $1", value1)
+	if err != nil {
+		return err
+	}
+	// * use tx to do more db inserts
+	return nil
 }

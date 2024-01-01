@@ -35,11 +35,11 @@ func Defer() {
 
 func DeferExample() int {
 	a := 10
-	defer func (val int) {
+	defer func(val int) {
 		fmt.Println("first:", val)
 	}(a)
 	a = 20
-	defer func (val int) {
+	defer func(val int) {
 		fmt.Println("second:", val)
 	}(a)
 	a = 30
@@ -52,7 +52,7 @@ func DeferExample() int {
 
 func SupplyReturnFunc() {
 	// ! defer expressions must be function calls like JavaScript's IIFEs
-	defer func () int {
+	defer func() int {
 		return 2
 	}()
 }
@@ -62,7 +62,7 @@ func DoSomeInserts(ctx context.Context, db *sql.DB, value1, value2 string) (err 
 	if err != nil {
 		return err
 	}
-	defer func(){
+	defer func() {
 		if err == nil {
 			err = tx.Commit()
 		}

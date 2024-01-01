@@ -112,6 +112,11 @@ func main() {
 	exercises.PopulateIntSlice()
 
 	intermediate.DeferExample()
+	p := person{}
+	i := 2
+	s := "Hello"
+	modifyFails(i, s, p)
+	fmt.Println(i, s, p)
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {

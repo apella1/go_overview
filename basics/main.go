@@ -117,6 +117,10 @@ func main() {
 	s := "Hello"
 	modifyFails(i, s, p)
 	fmt.Println(i, s, p)
+
+	profaneMessage := "hello world dang shoot this should stay shit"
+	removeProfanity(&profaneMessage)
+	fmt.Println(profaneMessage)
 }
 
 func incrementSends(sendsSoFar, sendsToAdd int) int {
